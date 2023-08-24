@@ -1,0 +1,30 @@
+## Welcome Employee
+print('Workday Check-In | MANDATORY')
+
+## list of employees 
+employees = {
+  "111" : 'John Brown',
+  "222": 'Rojay Chase',
+  "333": 'Oprah Winfrey',
+  "000": 'Temp'
+}
+##assinging dictionary to keys
+employees_values = employees.keys()
+
+
+
+log_in = True
+
+while log_in == True:
+##Ask for employee's workID
+  employee_id = input("Please enter your Employee ID, if you were not given one,Please reach out to your manager->  ")  
+  ##check if entered user data is in our employee dictionary
+  if employee_id in employees_values:
+    print(f"You're logged in as {employees[employee_id]} ")
+    
+  else:
+    print("Your Employee ID isn't registered, please reach out to your manager")
+    break
+      
+   
+##Employee Check-in information 
