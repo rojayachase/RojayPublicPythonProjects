@@ -28,10 +28,17 @@ while log_in == True:
 
     ##final info
     print(f"Here's {employees[employee_id]}'s timesheet data")
-    print(f"Time In:{time_in} '\n'Time Out:{time_out} '\n' Date:{date_in}")
-    break
+    print(f"Time In: {time_in} '\n'Time Out: {time_out} '\n' Date: {date_in}")
 
     ##save for employees use
+    with open('timesheet.txt', 'w') as f:
+      f.write(employees[employee_id] + "'s Timesheet'"
+              '\n')
+      f.write("Clocked In: " + time_in + '\n')
+      f.write("Clocked Out: " + time_out + '\n')
+      f.write("Date: " + date_in + '\n')
+      print('time sheet has been recorded')
+      break
 
   else:
     print(
